@@ -1,9 +1,22 @@
+import DesignSection from "./components/DesignSection";
+import Footer from "./components/Footer";
+import Information from "./components/Information";
+import Intro from "./components/Intro";
+import Navbar from "./components/Navbar";
+import StateSection from "./components/StateSection";
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center">Hello world!</h1>
+      <main>
+        <Navbar />
+        <Intro />
+        <DesignSection />
+        <StateSection />
+        <Information />
+        <Footer />
+      </main>
     </>
   );
 }
