@@ -22,8 +22,8 @@ const Navbar = () => {
   return (
     <>
       {!click ? (
-        <div className="bg-orange-500">
-          <div className="flex justify-between mx-5 bg-orange-500">
+        <div>
+          <div className="flex justify-between mx-5">
             <h2 id="logo" className="text-3xl text-white font-bold my-12">Blogr</h2>
             <div>
               <img
@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-orange-500">
+        <div>
           <div className="flex justify-between mx-8">
             <div>
               <h2 id="logo" className="text-3xl text-white font-bold my-12">Blogr</h2>
