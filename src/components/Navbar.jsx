@@ -51,7 +51,7 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <div>
+          <div className="absolute w-[-webkit-fill-available]">
             <div className="bg-white mx-8 rounded-[5px]">
               <div className="flex flex-col items-center">
                 <Product />
