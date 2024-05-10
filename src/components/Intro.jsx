@@ -3,12 +3,12 @@ import Navbar from "./Navbar";
 const Intro = () => {
   return (
     <section className="h-full bg-gradient-to-r from-red-400 to-red-500 rounded-bl-[90px]">
-      <div className="bg-[url('./images/bg-pattern-intro-mobile.svg')] bg-[-35vh]">
+      <div id="bg-img">
         <div>
           <Navbar />
         </div>
         <div>
-          <h1 className="text-white text-center text-4xl font-semibold my-16">
+          <h1 className="text-white text-center text-4xl font-semibold my-8">
             A modern <br />publishing platform
           </h1>
           <p className="text-white text-center text-xl">
@@ -29,3 +29,5 @@ const Intro = () => {
 };
 
 export default Intro;
+
+// className="bg-[url('./images/bg-pattern-intro-mobile.svg')] "
