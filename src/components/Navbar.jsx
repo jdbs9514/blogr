@@ -2,14 +2,22 @@ import hamburguer from "../images/icon-hamburger.svg";
 import arrowup from "../images/icon-arrow-dark.svg";
 import close from "../images/icon-close.svg";
 import { useState } from "react";
+import Connect from "../navbar_options/Connect";
+import Company from "../navbar_options/Company";
+import Product from "../navbar_options/Product";
+
 
 const Navbar = () => {
+
+
   const [click, setClick] = useState(false);
-  // const [display, setdisplay] = useState(second)
+  
 
   const toggleHamburguer = () => {
     setClick(!click);
   };
+
+  
 
   return (
     <>
@@ -43,49 +51,20 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <div className="bg-white mx-5 rounded-[10px]">
+            <div className="bg-white mx-5 rounded-[5px]">
               <div className="flex flex-col items-center">
-                <div>
-                  <div className="flex gap-2 my-5">
-                    <p className="text-xl">Product </p>
-                    <img src={arrowup} alt="arrow" className="h-full my-2.5" />
-                  </div>
-                  <ul>
-                    <li></li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="flex gap-2 my-5">
-                    <p className="text-xl">Company </p>
-                    <img src={arrowup} alt="arrow" className="h-full my-2.5" />
-                  </div>
-                  <ul>
-                    <li></li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="flex gap-2 my-5">
-                    <p className="text-xl">Connect </p>
-                    <img src={arrowup} alt="arrow" className="h-full my-2.5" />
-                  </div>
-                </div>
-                <ul className="bg-gray-300 w-[80%] flex flex-col items-center rounded-[10px]">
-                  <li className="my-2">Contact</li>
-                  <li className="my-2">Newsletter</li>
-                  <li className="my-2">LinkedIn</li>
-                </ul>
-
-                <hr className="bg-black w-[80%] my-3" />
+                <Product />
+                <Company />
+                <Connect /> 
+                <hr className="bg-gray-600 w-[80%] my-5" />
 
                 <div className="my-5">
-                  <p>Login</p>
+                  <p className="font-semibold">Login</p>
                 </div>
 
                 <div className="mb-5">
                   <button
-                    className="bg-gradient-to-r from-red-300 to-red-500 text-white rounded-2xl px-5 py-1"
+                    className="bg-gradient-to-r from-red-300 to-red-500 text-white rounded-2xl px-5 py-1 font-semibold"
                     type="button"
                   >
                     Sign Up
