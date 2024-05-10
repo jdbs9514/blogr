@@ -8,6 +8,8 @@ const Connect = () => {
     setDisplayFeature(!displayFeature);
   };
 
+
+
   return (
     <>
       {!displayFeature ? (
@@ -18,7 +20,7 @@ const Connect = () => {
               <img
                 src={arrowup}
                 alt="arrow"
-                className="h-full my-2.5"
+                className="h-full my-2.5 cursor-pointer"
                 onClick={toggleFeature}
               />
             </div>
@@ -32,16 +34,18 @@ const Connect = () => {
               <img
                 src={arrowup}
                 alt="arrow"
-                className="h-full my-2.5 rotate-180"
+                className="h-full my-2.5 rotate-180 cursor-pointer"
                 onClick={toggleFeature}
               />
             </div>
           </div>
 
-          <ul className="bg-gray-300 w-[80%] flex flex-col items-center rounded-[10px]">
-            <li className="my-2">Contact</li>
-            <li className="my-2">Newsletter</li>
-            <li className="my-2">LinkedIn</li>
+          <ul
+            className="bg-gray-300 w-[80%] flex flex-col items-center rounded-[10px]"
+          >
+            <li className="my-2 cursor-pointer hover:scale-125">Contact</li>
+            <li className="my-2 cursor-pointer hover:scale-125">Newsletter</li>
+            <li className="my-2 cursor-pointer hover:scale-125">LinkedIn</li>
           </ul>
         </>
       )}

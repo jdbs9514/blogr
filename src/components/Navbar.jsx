@@ -1,32 +1,33 @@
 import hamburguer from "../images/icon-hamburger.svg";
-import arrowup from "../images/icon-arrow-dark.svg";
 import close from "../images/icon-close.svg";
 import { useState } from "react";
 import Connect from "../navbar_options/Connect";
 import Company from "../navbar_options/Company";
 import Product from "../navbar_options/Product";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 
 const Navbar = () => {
-
-
   const [click, setClick] = useState(false);
-  
-
   const toggleHamburguer = () => {
     setClick(!click);
   };
 
-  
+  useGSAP(() => {
+    gsap.to('#hamburger',{ rotation: 360 }),
+    gsap.to('#logo', { x: 20, yoyo: true, repeat: 1})
+  },[])
 
   return (
     <>
       {!click ? (
         <div className="bg-orange-500">
           <div className="flex justify-between mx-5 bg-orange-500">
-            <h2 className="text-3xl text-white font-bold my-12">Blogr</h2>
+            <h2 id="logo" className="text-3xl text-white font-bold my-12">Blogr</h2>
             <div>
               <img
+                id="hamburger"
                 src={hamburguer}
                 alt="hamburguer"
                 className="my-14 cursor-pointer"
@@ -39,7 +40,7 @@ const Navbar = () => {
         <div className="bg-orange-500">
           <div className="flex justify-between mx-5">
             <div>
-              <h2 className="text-3xl text-white font-bold my-12">Blogr</h2>
+              <h2 id="logo" className="text-3xl text-white font-bold my-12">Blogr</h2>
             </div>
             <div>
               <img
