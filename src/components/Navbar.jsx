@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="bg-orange-500">
-          <div className="flex justify-between mx-5">
+          <div className="flex justify-between mx-8">
             <div>
               <h2 id="logo" className="text-3xl text-white font-bold my-12">Blogr</h2>
             </div>
@@ -52,14 +52,14 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <div className="bg-white mx-5 rounded-[5px]">
+            <div className="bg-white mx-8 rounded-[5px]">
               <div className="flex flex-col items-center">
                 <Product />
                 <Company />
                 <Connect /> 
                 <hr className="bg-gray-600 w-[80%] my-5" />
 
-                <div className="my-5">
+                <div className="my-8">
                   <p className="font-semibold">Login</p>
                 </div>
 
