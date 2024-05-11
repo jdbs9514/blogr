@@ -13,7 +13,16 @@
 
 #slate {
   background-color: #334155;
-  border-bottom-left-radius: 70px;
-  border-top-right-radius: 70px;
+  border-bottom-left-radius: 140px;
+  border-top-right-radius: 140px;
+}
+
+#circle {
+  background-image: url('./images/bg-pattern-circles.svg');
+  background-size: 157vw;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: -295px;
+  border-top-right-radius: 140px;
 }
 
