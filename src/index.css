@@ -8,5 +8,12 @@
   background-position-x: 35%;
   background-position-y: 33%;
   background-repeat: no-repeat;
-  border-bottom-left-radius: 20%;
+  border-bottom-left-radius: 30%;
 }
+
+#slate {
+  background-color: #334155;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+
