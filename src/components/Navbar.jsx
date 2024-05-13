@@ -25,7 +25,7 @@ const Navbar = () => {
         <div>
           <div className="flex justify-between mx-5">
             <h2 id="logo" className="text-3xl text-white font-bold my-12">Blogr</h2>
-            <div>
+            <div className="md:hidden">
               <img
                 id="hamburger"
                 src={hamburguer}
