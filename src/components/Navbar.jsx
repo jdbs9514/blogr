@@ -49,14 +49,15 @@ const Navbar = () => {
             </div>
             <div className="hidden lg:flex lg:gap-5 md:mt-2">
               <div className="my-8">
-                <p className="font-semibold lg:text-white">Login</p>
+                <p className="font-semibold lg:text-white lg:cursor-pointer">Login</p>
               </div>
 
               <div className="my-7">
                 <button
                   className="bg-gradient-to-r from-red-300 to-red-500 text-white 
                     rounded-2xl px-5 py-1 font-semibold lg:text-red-600 lg:bg-gradient-to-r 
-                    lg:from-white lg:to-white lg:text-sm lg:py-2 lg:px-7" 
+                    lg:from-white lg:to-white lg:text-sm lg:py-2 lg:px-7 lg:hover:bg-gradient-to-r 
+                    lg:hover:from-red-400 lg:hover:to-red-400 lg:hover:text-white" 
                   type="button"
                 >
                   Sign Up
