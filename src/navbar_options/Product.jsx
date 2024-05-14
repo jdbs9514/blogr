@@ -6,6 +6,7 @@ const Product = () => {
   const [displayFeature, setDisplayFeature] = useState(false);
   const [imageSource, setImageSource] = useState('');
 
+
   const toggleFeature = () => {
     setDisplayFeature(!displayFeature);
   };
@@ -24,6 +25,7 @@ const Product = () => {
       window.removeEventListener('resize', handleResize);
     }
   },[])
+
 
   return (
     <>

@@ -9,6 +9,8 @@ import gsap from "gsap";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+
+
   const toggleHamburguer = () => {
     setClick(!click);
   };
