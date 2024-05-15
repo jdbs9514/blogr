@@ -6,7 +6,7 @@
   background-image: url('./images/bg-pattern-intro-mobile.svg');
   background-size: 340vw;
   background-position-x: 35%;
-  background-position-y: 33%;
+  background-position-y: 36%;
   background-repeat: no-repeat;
   border-bottom-left-radius: 30%;
 }
@@ -29,4 +29,15 @@
 #footer-section {
   background-color: #334155;
   border-top-right-radius: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  #bg-img {
+    background-image: url('./images/bg-pattern-intro-desktop.svg');
+    background-size: 217vw;
+    background-position-x: -33rem;
+    background-position-y: 51%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 30%;
+  }
 }
