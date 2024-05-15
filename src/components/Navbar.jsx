@@ -33,7 +33,7 @@ const Navbar = () => {
     <>
       {!click ? (
         <div>
-          <div className=" mx-5 lg:flex lg:justify-between lg:pt-5 lg:mx-[120px]">
+          <div className=" mx-5 lg:flex lg:justify-between lg:pt-5 lg:mx-[210px]">
             <div className="flex justify-between lg:flex lg:gap-[60px]">
               <h2
                 id="logo"

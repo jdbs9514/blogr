@@ -8,11 +8,11 @@ const Intro = () => {
           <Navbar />
         </div>
         <div>
-          <h1 className="text-white text-center text-4xl font-semibold my-8">
-            A modern <br />publishing platform
+          <h1 className="text-white text-center text-4xl font-semibold my-8 mx-[50px] lg:text-7xl lg:mt-[80px]">
+            A modern publishing platform
           </h1>
-          <p className="text-white text-center text-xl">
-            Grow your audience and build your <br /> online brand
+          <p className="text-white text-center text-xl mx-[40px]">
+            Grow your audience and build your online brand
           </p>
         </div>
         <div className="flex justify-evenly my-12">
@@ -29,5 +29,3 @@ const Intro = () => {
 };
 
 export default Intro;
-
-// className="bg-[url('./images/bg-pattern-intro-mobile.svg')] "
