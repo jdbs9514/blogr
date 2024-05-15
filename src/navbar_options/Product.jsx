@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import arrowup from "../images/icon-arrow-dark.svg";
 import arrowlight from "../images/icon-arrow-light.svg";
 
-const Product = () => {
+const Product = ({ openMenu, toggleMenu }) => {
   const [displayFeature, setDisplayFeature] = useState(false);
-  const [imageSource, setImageSource] = useState('');
+  const [imageSource, setImageSource] = useState("");
 
 
   const toggleFeature = () => {
@@ -13,19 +13,18 @@ const Product = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if(window.innerWidth > 1024){
-        setImageSource(arrowlight)
+      if (window.innerWidth > 1024) {
+        setImageSource(arrowlight);
       } else {
-        setImageSource(arrowup)
-      };
+        setImageSource(arrowup);
+      }
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
     return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  },[])
-
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -33,7 +32,9 @@ const Product = () => {
         <>
           <div>
             <div className="flex gap-2 my-5 lg:my-6">
-              <p className="text-xl font-semibold lg:text-white lg:text-sm">Product</p>
+              <p className="text-xl font-semibold lg:text-white lg:text-sm">
+                Product
+              </p>
               <img
                 src={imageSource}
                 alt="arrow"
@@ -47,7 +48,9 @@ const Product = () => {
         <>
           <div>
             <div className="flex gap-2 my-5">
-              <p className="text-xl font-semibold lg:text-white lg:text-sm lg:text-decoration-line: underline">Product</p>
+              <p className="text-xl font-semibold lg:text-white lg:text-sm lg:text-decoration-line: underline">
+                Product
+              </p>
               <img
                 src={imageSource}
                 alt="arrow"
@@ -56,18 +59,19 @@ const Product = () => {
               />
             </div>
           </div>
-
           <ul className="bg-gray-300 w-[80%] flex flex-col items-center rounded-[10px] lg:absolute lg:w-[10%] lg:mt-[70px] lg:ml-[-50px] lg:items-start lg:px-5">
             <li className="my-2 cursor-pointer hover:scale-125">Overview</li>
             <li className="my-2 cursor-pointer hover:scale-125">Pricing</li>
             <li className="my-2 cursor-pointer hover:scale-125">MarketPlace</li>
             <li className="my-2 cursor-pointer hover:scale-125">Features</li>
-            <li className="my-2 cursor-pointer hover:scale-125">Integrations</li>
+            <li className="my-2 cursor-pointer hover:scale-125">
+              Integrations
+            </li>
           </ul>
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
