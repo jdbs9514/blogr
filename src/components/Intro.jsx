@@ -15,11 +15,11 @@ const Intro = () => {
             Grow your audience and build your online brand
           </p>
         </div>
-        <div className="flex justify-evenly my-12">
-          <button className="bg-white text-red-600 font-semibold text-xl rounded-[35px] px-4 py-3 cursor-pointer mb-40">
+        <div className="flex justify-evenly my-12 lg:mx-[650px]">
+          <button className="bg-white text-red-600 font-semibold text-xl rounded-[35px] px-4 py-3 cursor-pointer mb-40 lg:hover:bg-red-400 lg:hover:text-white">
             Start for free
           </button>
-          <button className="text-white font-semibold text-xl border rounded-[35px] px-4 py-3 cursor-pointer mb-40">
+          <button className="text-white font-semibold text-xl border rounded-[35px] px-4 py-3 cursor-pointer mb-40 lg:px-5 lg:hover:bg-white lg:hover:text-red-400">
             Learn More
           </button>
         </div>
