@@ -100,9 +100,9 @@ const Navbar = () => {
           <div className="absolute w-[-webkit-fill-available] shadow-2xl">
             <div className="bg-white mx-8 rounded-[5px]">
               <div className="flex flex-col items-center ">
-                <Product />
-                <Company />
-                <Connect />
+                <Product menuOpen={menuOpen} toggleMenu={toggleMenu} />
+                <Company menuOpen={menuOpen} toggleMenu={toggleMenu}/>
+                <Connect menuOpen={menuOpen} toggleMenu={toggleMenu}/>
                 <hr className="bg-gray-600 w-[80%] my-5" />
 
                 <div className="my-8">

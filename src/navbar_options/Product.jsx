@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import arrowup from "../images/icon-arrow-dark.svg";
 import arrowlight from "../images/icon-arrow-light.svg";
 
-const Product = ({ openMenu, toggleMenu }) => {
-  const [displayFeature, setDisplayFeature] = useState(false);
+const Product = ({ menuOpen, toggleMenu }) => {
   const [imageSource, setImageSource] = useState("");
 
 
   const toggleFeature = () => {
-    setDisplayFeature(!displayFeature);
+    toggleMenu(0);
   };
 
   useEffect(() => {
@@ -28,27 +27,11 @@ const Product = ({ openMenu, toggleMenu }) => {
 
   return (
     <>
-      {!displayFeature ? (
+      { menuOpen === 0 ? (
         <>
           <div>
-            <div className="flex gap-2 my-5 lg:my-6">
-              <p className="text-xl font-semibold lg:text-white lg:text-sm">
-                Product
-              </p>
-              <img
-                src={imageSource}
-                alt="arrow"
-                className="h-full my-2.5 cursor-pointer lg:mt-2"
-                onClick={toggleFeature}
-              />
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div>
-            <div className="flex gap-2 my-5">
-              <p className="text-xl font-semibold lg:text-white lg:text-sm lg:text-decoration-line: underline">
+            <div className="flex gap-2 my-6">
+              <p className="text-xl font-semibold lg:text-white lg:text-sm lg:text-decoration-line: underline cursor-pointer" onClick={toggleFeature}>
                 Product
               </p>
               <img
@@ -69,9 +52,26 @@ const Product = ({ openMenu, toggleMenu }) => {
             </li>
           </ul>
         </>
+      ) : (
+        <>
+          <div>
+            <div className="flex gap-2 my-5 lg:my-6">
+              <p className="text-xl font-semibold lg:text-white lg:text-sm cursor-pointer" onClick={toggleFeature}>
+                Product
+              </p>
+              <img
+                src={imageSource}
+                alt="arrow"
+                className="h-full my-2.5 cursor-pointer lg:mt-2"
+                onClick={toggleFeature}
+              />
+            </div>
+          </div>
+        </>
       )}
     </>
   );
 };
 
 export default Product;
+

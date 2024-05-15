@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import arrowup from "../images/icon-arrow-dark.svg";
 import arrowlight from "../images/icon-arrow-light.svg";
 
-const Company = ({ openMenu, toggleMenu }) => {
-  const [displayFeature, setDisplayFeature] = useState(false);
+const Company = ({ menuOpen, toggleMenu }) => {
   const [imageSource, setImageSource] = useState("");
 
 
   const toggleFeature = () => {
-    setDisplayFeature(!displayFeature);
+    toggleMenu(1);
   };
 
   // cambiamos la imagen dependiendo el tamaño de la pantalla
@@ -29,27 +28,11 @@ const Company = ({ openMenu, toggleMenu }) => {
 
   return (
     <>
-      {!displayFeature ? (
+      { menuOpen === 1 ? (
         <>
           <div>
-            <div className="flex gap-2 my-5 lg:my-6">
-              <p className="text-xl font-semibold lg:text-sm lg:text-white">
-                Company
-              </p>
-              <img
-                src={imageSource}
-                alt="arrow"
-                className="h-full my-2.5 cursor-pointer lg:mt-2"
-                onClick={toggleFeature}
-              />
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div>
-            <div className="flex gap-2 my-5">
-              <p className="text-xl font-semibold lg:text-white lg:text-sm lg:text-decoration-line: underline">
+            <div className="flex gap-2 my-6">
+              <p className="text-xl font-semibold lg:text-white lg:text-sm lg:text-decoration-line: underline cursor-pointer" onClick={toggleFeature}>
                 Company
               </p>
               <img
@@ -67,9 +50,26 @@ const Company = ({ openMenu, toggleMenu }) => {
             <li className="my-2 cursor-pointer hover:scale-125">Careers</li>
           </ul>
         </>
+      ) : (
+        <>
+          <div>
+            <div className="flex gap-2 my-5 lg:my-6">
+              <p className="text-xl font-semibold lg:text-sm lg:text-white cursor-pointer" onClick={toggleFeature}>
+                Company
+              </p>
+              <img
+                src={imageSource}
+                alt="arrow"
+                className="h-full my-2.5 cursor-pointer lg:mt-2"
+                onClick={toggleFeature}
+              />
+            </div>
+          </div>
+        </>
       )}
     </>
   );
 };
 
 export default Company;
+
