@@ -1,6 +1,25 @@
 import editor from "../images/illustration-editor-mobile.svg";
+import editorDesktop from "../images/illustration-editor-desktop.svg";
+import { useState, useEffect } from "react";
 
 const DesignSection = () => {
+  const [imageSource, setImageSource] = useState("");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setImageSource(editorDesktop);
+      } else {
+        setImageSource(editor);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const text = [
     {
       title: "Introducing an extensible editor",
@@ -21,23 +40,29 @@ const DesignSection = () => {
 
   return (
     <section>
-      <div className="mt-[25%]">
-        <div className="text-center">
-          <h2 className="font-semibold text-xl text-purple-950">Designed for the future</h2>
+      <div className="text-center">
+        <h2 className="font-semibold text-2xl text-purple-950 lg:text-3xl mt-[25%] lg:mt-[10%]">
+          Designed for the future
+        </h2>
+      </div>
+      <div className="lg:mt-[5%] lg:flex lg:flex-row-reverse">
+        <div className="mt-12 flex justify-center lg:mt-[-10rem]">
+          <img src={imageSource} alt="editor" className="lg:w-[200rem] lg:ml-[500px]" />
         </div>
-        <div className="mt-12">
-          <img src={editor} alt="editor" />
+        <div className="lg:ml-[100px]">
+          {text.map((item, index) => (
+            <div key={index}>
+              <div className="text-center mt-10 lg:text-start">
+                <h2 className="font-semibold text-purple-950 text-2xl mx-14 lg:text-3xl">
+                  {item.title}
+                </h2>
+              </div>
+              <div className="mt-4 text-center lg:text-start lg:mt-6">
+                <p className="px-9 text-zinc-500 lg:px-[55px] lg:text-xl">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        {text.map((item, index) => (
-          <div key={index}>
-            <div className="text-center mt-10">
-              <h2 className="font-semibold text-purple-950 text-2xl mx-14">{item.title}</h2>
-            </div>
-            <div className="mt-4 text-center">
-              <p className="px-9 text-zinc-500">{item.description}</p>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );
